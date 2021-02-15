@@ -1,4 +1,4 @@
-				# _AirBnB Clone_
+# AirBnB Clone
 ![HBNB](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T115534Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=626948cdef2539543fc2d447f2d0d1120f3261c27a0e0dd92a28c7ce14794ad6)
 Welcome to the AirBnB clone project! (The Holberton B&B) <br />
 The HBNB project clone th [AirBnB website](https://www.airbnb.com/) to buil a first full web application using : *HTML/CSS, Database storage, API, Front-end integration ...* <br />
@@ -27,38 +27,39 @@ $ ./console.py
 ## Examples
 ### In interactive mode:
 
-``` $ ./console.py <br />
-(hbnb) help <br />
+``` $ ./console.py
+(hbnb) help
 
-Documented commands (type help <topic>): <br />
+Documented commands (type help <topic>):
 ========================================
-EOF  help  quit <br />
+EOF  help  quit
 
-(hbnb) <br />
-(hbnb) <br />
-(hbnb) quit <br />
-$ <br />
+(hbnb)
+(hbnb)
+(hbnb) quit
+$ ```
+<br />
 ## In non-interactive mode: (like the Shell project in C)
 
-$ echo "help" | ./console.py <br />
-(hbnb) <br />
+```$ echo "help" | ./console.py
+(hbnb)
 
-Documented commands (type help <topic>): <br />
+Documented commands (type help <topic>):
 ========================================
-EOF  help  quit <br />
-(hbnb) <br />
-$ <br />
-$ cat test_help <br />
-help <br />
-$ <br />
-$ cat test_help | ./console.py <br />
-(hbnb) <br />
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
 
-Documented commands (type help <topic>): <br />
+Documented commands (type help <topic>):
 ========================================
-EOF  help  quit <br />
-(hbnb) <br /> ```
-$ <br />
+EOF  help  quit
+(hbnb)
+$ ```
 
 ## Authors
 [Hadir Jenni](https://github.com/JennyHadir) <br />
