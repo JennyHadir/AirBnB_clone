@@ -1,6 +1,6 @@
 # AirBnB Clone
-![Alt Text](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T115534Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=626948cdef2539543fc2d447f2d0d1120f3261c27a0e0dd92a28c7ce14794ad6)
-<br />
+![Alt Text](https://raw.githubusercontent.com/didierrevelo/AirBnB_clone/jhonny/images/Image.png)
+___
 Welcome to the AirBnB clone project! (The Holberton B&B) <br />
 The HBNB project clone th [AirBnB website](https://www.airbnb.com/) to buil a first full web application using : *HTML/CSS, Database storage, API, Front-end integration ...* <br />
 * First will put in place a parent class called [*BaseModel*](https://github.com/JennyHadir/AirBnB_clone/blob/master/models/base_model.py) to take care of the initialization, serialization and deserialization of other instances <br />
