@@ -1,1 +1,1 @@
-{"User.00c19d94-e539-4e60-b66b-eed979d2b6c5": {"__class__": "User", "created_at": "2021-02-15T12:00:58.486852", "updated_at": "2021-02-15T12:00:58.486962", "id": "00c19d94-e539-4e60-b66b-eed979d2b6c5"}}
+{"BaseModel.4d88aa68-fc0d-4aaa-9945-5c86829827ff": {"id": "4d88aa68-fc0d-4aaa-9945-5c86829827ff", "created_at": "2021-02-15T13:43:09.877883", "updated_at": "2021-02-15T13:43:09.877908", "name": "Holberton", "my_number": 89, "__class__": "BaseModel"}}
