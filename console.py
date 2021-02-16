@@ -24,10 +24,13 @@ class HBNBCommand(cmd.Cmd):
     def precmd(self, line):
         """Hook method executed just before the command line is interpreted
         """
-        print("debug>>", line)
         cmnd, args, line = self.parseline(line)
         if cmnd in cls_list:
-            line = args[1:-2] + ' ' + cmnd
+            cls_name = cmnd
+            cmnd = args[1: args.find('(')]
+            args = args[args.find('(') + 1:-1]
+            args = args.replace(',', '')
+            line = ' '.join([cmnd, cls_name, args])
         return line
 
     def do_quit(self, line):
@@ -57,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
     def do_show(self, line):
         """ prints the string representation of an instance
         """
-        args = line.split()
+        args = shlex.split(line)
         if len(line) == 0:
             print("** class name missing **")
         elif args[0] not in cls_list:
@@ -74,10 +77,9 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, line):
         """ Prints all string representation of all instances
         """
-        args = line.split()
+        args = shlex.split(line)
         obj_list = []
         if len(line) == 0:
-            print("debug>>", models.storage.all())
             for obj in models.storage.all().values():
                 obj_list.append(obj.__str__())
             print(obj_list)
@@ -86,7 +88,6 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 for obj in models.storage.all().values():
-                    print("debug>>" + type(obj).__name__)
                     if type(obj).__name__ == args[0]:
                         obj_list.append(obj.__str__())
                 print(obj_list)
@@ -119,7 +120,7 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, line):
         """Deletes an instance based on the class name and id
         """
-        args = line.split()
+        args = shlex.split(line)
         objs_dict = models.storage.all()
         if len(line) == 0:
             print("** class name missing **")
@@ -135,6 +136,14 @@ class HBNBCommand(cmd.Cmd):
                 del objs_dict[inst_name]
                 models.storage.save()
 
+    def do_count(self, line):
+        """Retrieve the number of instances of a class
+        """
+        count = 0
+        for k in models.storage.all().keys():
+            if line in k:
+                count += 1
+        print(count)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
