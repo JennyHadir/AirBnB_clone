@@ -21,6 +21,15 @@ class HBNBCommand(cmd.Cmd):
     """ Command interpreter class """
     prompt = "(hbnb) "
 
+    def precmd(self, line):
+        """Hook method executed just before the command line is interpreted
+        """
+        print("debug>>", line)
+        cmnd, args, line = self.parseline(line)
+        if cmnd in cls_list:
+            line = args[1:-2] + ' ' + cmnd
+        return line
+
     def do_quit(self, line):
         """Exit the console
         """
