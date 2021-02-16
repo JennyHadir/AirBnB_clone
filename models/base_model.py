@@ -26,7 +26,10 @@ class BaseModel():
 
     def __str__(self):
         """ String representation of BaseModel """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+                                     self.id,
+                                     self.__dict__
+                                     )
 
     def save(self):
         """ Update the update_at with the current datetime """
