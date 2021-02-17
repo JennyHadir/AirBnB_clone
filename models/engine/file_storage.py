@@ -35,16 +35,11 @@ class FileStorage:
             json.dump(jsobj, file)
 
     def reload(self):
-        pass
-
-    def reloaddd(self):
         """ Deselialize a Json file to __object """
-        print("debug>> reloading")
         try:
             obj = {}
             with open(FileStorage.__file_path, 'r') as f:
-                obj = json.loads(f.read())
-            print("debug>>", obj)
+                obj = json.load(f)
             for key, value in obj.items():
                 vals = eval(value['__class__'])(**value)
                 self.__objects[key] = vals

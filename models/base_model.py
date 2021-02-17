@@ -14,10 +14,11 @@ class BaseModel():
         """ Initialization """
         if kwargs:
             for key, value in kwargs.items():
-                if __name__ != "__class__":
+                if key != "__class__":
                     setattr(self, key, value)
-                if key == 'update_at' or key == 'created_at':
-                    self.__dict__[key] = datetime.strptime(value, time_format)
+                if key == 'updated_at' or key == 'created_at':
+                    t = datetime.datetime.strptime(value, time_format)
+                    self.__dict__[key] = t
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.datetime.now()
