@@ -113,7 +113,10 @@ class HBNBCommand(cmd.Cmd):
                 print("** value missing **")
             else:
                 obj = objs_dict[inst_name]
-                casted_value = type(getattr(obj, args[2]))(args[3])
+                try:
+                    casted_value = type(getattr(obj, args[2]))(args[3])
+                except AttributeError:
+                    casted_value = args[3]
                 setattr(obj, args[2], casted_value)
                 obj.save()
 
